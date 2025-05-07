@@ -1,9 +1,13 @@
-import React from 'react'
+// src/components/Home.js
+import React from 'react';
 
-function Home() {
+const Home = () => {
   return (
-    <div>Welcome to  Skill Flow </div>
-  )
-}
+    <div>
+      <h1>Welcome to SkillFlow</h1>
+      <p>Please <a href="/login">login</a> or <a href="/register">register</a> to continue.</p>
+    </div>
+  );
+};
 
-export default Home
+export default Home;
