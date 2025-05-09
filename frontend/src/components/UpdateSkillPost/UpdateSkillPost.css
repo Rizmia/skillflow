@@ -1,0 +1,104 @@
+/*.update-container {
+    width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 2px solid #666;
+    border-radius: 10px;
+    background-color: #fcfcfc;
+  }
+  
+  .update-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .update-form input,
+  .update-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+  }
+  
+  .update-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .update-form button:hover {
+    background-color: #e65100;
+  }*/
+
+
+
+  .update-container {
+  width: 95%;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.update-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.edit-icon {
+  font-size: 26px;
+}
+
+.update-header h2 {
+  font-size: 20px;
+  margin: 0;
+  color: #444;
+}
+
+.update-form input,
+.update-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  resize: none;
+}
+
+.update-form textarea {
+  min-height: 120px;
+}
+
+.update-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff9800;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.update-form button:hover {
+  background-color: #e65100;
+}
+
+  
