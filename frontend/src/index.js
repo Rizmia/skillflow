@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
+//export { default } from './GroupForm';
+// export { default } from './GroupForm';
+// export { default } from './GroupHome';
+// export { default } from './GroupList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
