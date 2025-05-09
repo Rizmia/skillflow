@@ -1,46 +1,23 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import CourseList from './components/CourseList';
+import CourseForm from './components/CourseForm';
 import Navbar from './components/Navbar';
-import Login from './components/Login';
-import Register from './components/Register';
-import Profile from './components/Profile';
 import './App.css';
-import './styles/styles.css';
-import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 
-function App() {
+const App = () => {
   return (
     <Router>
-      <div>
+      <div className="app-container">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Navigate to="/login" />} /> {/* Redirect to login */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/auth/callback" element={<AuthCallback />} />
+          <Route path="/" element={<CourseList />} />
+          <Route path="/create" element={<CourseForm />} />
+          <Route path="/edit/:id" element={<CourseForm />} />
         </Routes>
       </div>
     </Router>
   );
-}
-
-function AuthCallback() {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const query = new URLSearchParams(window.location.search);
-    const token = query.get('token');
-
-    if (token) {
-      localStorage.setItem('jwt', token);
-      navigate('/profile');
-    } else {
-      navigate('/login', { state: { error: 'Authentication failed. Please try again.' } });
-    }
-  }, [navigate]);
-
-  return null;
-}
+};
 
 export default App;
