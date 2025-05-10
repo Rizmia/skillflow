@@ -32,7 +32,7 @@ public class SkillPost {
         this.comments = new ArrayList<>();
     }
 
-    // Getters and Setters
+    // add Getters and Setters
     public String getId() {
         return id;
     }

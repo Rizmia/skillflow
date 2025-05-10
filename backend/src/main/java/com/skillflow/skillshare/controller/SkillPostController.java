@@ -41,10 +41,6 @@ public class SkillPostController {
         return service.delete(id) ? "Deleted Successfully" : "Post Not Found";
     }
 
-
-
-
-
     @PutMapping("/{id}/like")
     public SkillPost likePost(@PathVariable String id) {
         return service.incrementLikes(id);

@@ -42,9 +42,6 @@ public class SkillPostService {
         return false;
     }
 
-
-    
-
     public SkillPost incrementLikes(String id) {
     return repository.findById(id).map(post -> {
         post.setLikes(post.getLikes() + 1);
