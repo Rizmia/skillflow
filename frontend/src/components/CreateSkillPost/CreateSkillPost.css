@@ -1,46 +1,4 @@
-/*.create-container {
-    width: 400px;
-    margin: 40px auto;
-    padding: 20px;
-    border: 2px solid #333;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-  }
-  
-  .create-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .create-form input,
-  .create-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    font-size: 1rem;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-  }
-  
-  .create-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #2e7d32;
-    color: white;
-    border: none;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .create-form button:hover {
-    background-color: #1b5e20;
-  }*/
-
-
-
-
-  .create-container {
+.create-container {
   width: 95%;
   max-width: 500px;
   margin: 50px auto;
