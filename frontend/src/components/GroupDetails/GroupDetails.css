@@ -7,6 +7,12 @@
 .group-info p { font-size: 1.1rem; color: #34495e; margin: 10px 0; }
 .members-list { list-style-type: disc; padding-left: 20px; margin: 10px 0; }
 .members-list li { font-size: 1rem; color: #34495e; margin: 5px 0; }
+.group-actions { display: flex; gap: 10px; margin-top: 10px; }
+.group-actions .edit-btn, .group-actions .delete-btn { padding: 8px 15px; font-size: 0.9rem; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; }
+.group-actions .edit-btn { background-color: #f39c12; color: white; }
+.group-actions .edit-btn:hover { background-color: #e08e0b; }
+.group-actions .delete-btn { background-color: #e74c3c; color: white; }
+.group-actions .delete-btn:hover { background-color: #c0392b; }
 .new-post-btn { padding: 10px 20px; background-color: #17a2b8; color: white; border: none; border-radius: 5px; cursor: pointer; margin-bottom: 20px; }
 .new-post-btn:hover { background-color: #138496; }
 .post-form-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; z-index: 1000; }
@@ -38,3 +44,7 @@
 .comments-list { list-style-type: none; padding-left: 0; margin-top: 10px; }
 .comments-list li { font-size: 0.95rem; color: #34495e; margin: 5px 0; }
 .error-message { background-color: #f8d7da; color: #721c24; padding: 10px; border-radius: 5px; text-align: center; margin-bottom: 15px; }
+
+
+
+

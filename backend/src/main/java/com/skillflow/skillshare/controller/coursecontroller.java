@@ -1,5 +1,5 @@
-package com.skillflow.skillshare.controller;
+ package com.skillflow.skillshare.controller;
 
-public class coursecontroller {
+ public class coursecontroller {
     
-}
+ }

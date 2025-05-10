@@ -52,4 +52,4 @@ public class StudyGroupService {
             throw new IllegalArgumentException("Group not found.");
         }
     }
-}
+}                       

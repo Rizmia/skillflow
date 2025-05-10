@@ -60,6 +60,7 @@ const GroupDetails = () => {
   const handleLike = async (postId) => { try { const response = await api.post(`/posts/${postId}/like`, { userEmail }); setPosts(posts.map(p => p.id === postId ? response.data : p)); } catch (error) { console.error('Error liking post:', error); } };
   const handleComment = async (postId, text) => { try { const response = await api.post(`/posts/${postId}/comment`, { userEmail, text, createdAt: new Date() }); setPosts(posts.map(p => p.id === postId ? response.data : p)); } catch (error) { console.error('Error commenting:', error); } };
   const handleLeaveGroup = async () => { if (window.confirm('Are you sure you want to leave this group?')) { try { await api.post(`/groups/${id}/leave`, { email: userEmail }); navigate('/groups'); } catch (error) { console.error('Error leaving group:', error); alert('Error leaving group'); } } };
+  const handleDeleteGroup = async () => { if (window.confirm('Are you sure you want to delete this group?')) { try { await api.delete(`/groups/${id}`); navigate('/groups'); } catch (error) { console.error('Error deleting group:', error); alert('Error deleting group'); } } };
 
   if (!group) return <div className="group-details-container">Loading...</div>;
 
@@ -77,6 +78,12 @@ const GroupDetails = () => {
         {group.members.length > 0 ? (
           <ul className="members-list">{group.members.map((m, i) => <li key={i}>{m.name} ({m.email})</li>)}</ul>
         ) : <p>No members yet.</p>}
+        {group.createdBy === userEmail && (
+          <div className="group-actions">
+            <button onClick={() => navigate('/group/new', { state: { group } })} className="edit-btn">Edit Group</button>
+            <button onClick={handleDeleteGroup} className="delete-btn">Delete Group</button>
+          </div>
+        )}
       </div>
       <button onClick={() => { setShowPostForm(true); setEditPostId(null); setPostForm({ caption: '', description: '', media: null }); setPostError(null); }} className="new-post-btn">New Post</button>
       {showPostForm && (
@@ -113,4 +120,4 @@ const GroupDetails = () => {
   );
 };
 
-export default GroupDetails;
+export default GroupDetails;  

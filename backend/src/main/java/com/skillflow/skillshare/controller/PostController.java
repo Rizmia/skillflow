@@ -1,9 +1,3 @@
-// package com.skillflow.skillshare.controller;
-
-// public class PostController {
-    
-// }
-
 package com.skillflow.skillshare.controller;
 
 import com.skillflow.skillshare.model.Post;

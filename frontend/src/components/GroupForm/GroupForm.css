@@ -1,67 +1,111 @@
-.group-form-container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+.gf-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('F:\3RD_YEAR\2ND_SEM\PAF\PAF_PROJECT\skillflow\frontend\public\images\Screenshot 2025-05-10 011923.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.gf-content {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for readability */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.gf-back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.gf-back-btn:hover {
+  background-color: #5a6268;
+}
+
+.gf-container h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gf-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.gf-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.gf-form-group label {
+  font-size: 1rem;
+  color: #34495e;
+  margin-bottom: 5px;
+}
+
+.gf-form-group input,
+.gf-form-group textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.gf-form-group input:focus,
+.gf-form-group textarea:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.gf-form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.gf-submit-btn {
+  padding: 12px;
+  font-size: 1.1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.gf-submit-btn:hover {
+  background-color: #2980b9;
+}
+
+.gf-error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 15px;
+}
   
-  .group-form-container h2 {
-    font-size: 1.8rem;
-    color: #2c3e50;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .group-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-group label {
-    font-size: 1rem;
-    color: #34495e;
-    margin-bottom: 5px;
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #dcdcdc;
-    border-radius: 5px;
-    outline: none;
-  }
-  
-  .form-group input:focus,
-  .form-group textarea:focus {
-    border-color: #3498db;
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
-  }
-  
-  .form-group textarea {
-    resize: vertical;
-    min-height: 100px;
-  }
-  
-  .submit-btn {
-    padding: 12px;
-    font-size: 1.1rem;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .submit-btn:hover {
-    background-color: #2980b9;
-  }
